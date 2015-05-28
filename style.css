@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  line-height: 1.7;
+}
+
+/*********GLOBALS**************/
+#header {
+  width: 100%;
+  height: 90px;
+  background-color: rgba(33, 33, 33, 0.9);
+  margin: 0;
+  float: left;
+  position: fixed;
+}
+
+.logo {
+  color: #fff;
+  position: relative;
+  top: -5px;
+  left: 2%;
+}
+
+@media (min-width: 850px) {
+  .navigation {
+    position: absolute;
+    top: 17px;
+    right: 2%;
+  }
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 850px) {
+  .navigation ul li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+}
+
+.navigation ul li a {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+  background-color: tomato;
+  text-transform: uppercase;
+}
+
+@media (min-width: 850px) {
+  .navigation ul li a {
+    display: inline-block;
+    float: left;
+  }
+}
+
+.navigation ul li a.selected {
+  background-color: orange;
+}
+
+.responsive-menu-btn {
+  position: absolute;
+  top: 18px;
+  right: 2%;
+}
+
+@media (min-width: 850px) {
+  .responsive-menu-btn {
+    display: none;
+  }
+}
+
+.responsive-menu-btn a {
+  display: block;
+  float: left;
+  width: 44px;
+  height: 44px;
+}
+
+.responsive-menu-btn a span {
+  display: block;
+  width: 70%;
+  height: 2px;
+  margin: 10px auto;
+}
+
+#about,
+#services,
+#contact,
+#products {
+  min-height: 600px;
+  padding-top: 100px;
+  width: 80%;
+  margin: 0 auto;
+}
