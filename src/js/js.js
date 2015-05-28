@@ -6,15 +6,16 @@ var navi = (function(){
     toggle: function() {
 
         $window.bind('load resize',function(){
-          if ($window.width() < 850){
+          winWidth = $window.width();
+          if (winWidth < 850){
             $navUl.hide();
-            $('.responsive-menu-btn').on('click', function(e) {
-              e.preventDefault();
-              $navUl.toggle();
-            });
           } else {
             $navUl.show();
           }
+          $('.responsive-menu-btn').on('click', function(e) {
+            e.preventDefault();
+            $navUl.toggle();
+          });
         });
     },
     scrollToDiv: function(){

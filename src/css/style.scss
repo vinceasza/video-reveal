@@ -37,8 +37,11 @@ body {
   }
   ul {
     list-style: none;
-    margin: 0;
+    margin: -7px;
     padding: 0;
+    @media (min-width: 850px){
+      margin: 0px;
+    }
     li {
       @media (min-width: 850px){
         display: inline-block;
@@ -82,6 +85,7 @@ body {
       width: 70%;
       height: 2px;
       margin: 10px auto;
+      background-color: #fff;
     }
   }
 }
