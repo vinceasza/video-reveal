@@ -14,74 +14,77 @@ body {
   background-color: rgba(33, 33, 33, 0.9);
   margin: 0;
   float: left;
-  position: fixed;
 }
 
 .logo {
   color: #fff;
-  position: relative;
-  top: -5px;
-  left: 2%;
+  float: left;
 }
 
-@media (min-width: 850px) {
-  .navigation {
-    position: absolute;
-    top: 17px;
-    right: 2%;
-  }
+.navigation {
+  float: right;
+  z-index: 9000;
 }
 
 .navigation ul {
   list-style: none;
-  margin: -7px;
   padding: 0;
+  float: right;
 }
 
-@media (min-width: 850px) {
-  .navigation ul {
-    margin: 0px;
-  }
-}
-
-@media (min-width: 850px) {
-  .navigation ul li {
-    display: inline-block;
-    margin: 0 5px;
-  }
+.navigation ul li {
+  padding: 0;
+  float: left;
+  margin: 20px 10px;
 }
 
 .navigation ul li a {
+  color: red;
+  text-decoration: none;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  box-shadow: 1px 1px 4px #888;
+}
+
+.navigation ul li ul.sub-menu {
+  position: absolute;
+  margin: 10px 0 0 0;
+  padding: 0;
+  width: 200px;
+  padding: 40px 0;
+  display: none;
+}
+
+.navigation ul li ul.sub-menu li {
+  padding: 0;
+  margin: 10px 0;
+  float: none;
+}
+
+.navigation ul li ul.sub-menu li a {
+  padding: 15px;
   display: block;
   width: 100%;
-  padding: 15px;
-  color: #fff;
-  text-decoration: none;
-  background-color: tomato;
-  text-transform: uppercase;
+  color: white;
+  background-color: gray;
+  box-shadow: none;
 }
 
-@media (min-width: 850px) {
-  .navigation ul li a {
-    display: inline-block;
-    float: left;
-  }
+.navigation ul li:hover a {
+  box-shadow: 1px 1px 4px red;
 }
 
-.navigation ul li a.selected {
-  background-color: orange;
+.navigation ul li:hover ul {
+  display: block;
 }
 
 .responsive-menu-btn {
+  z-index: 8000;
   position: absolute;
   top: 18px;
   right: 2%;
-}
-
-@media (min-width: 850px) {
-  .responsive-menu-btn {
-    display: none;
-  }
+  display: none;
 }
 
 .responsive-menu-btn a {
@@ -99,12 +102,33 @@ body {
   background-color: #fff;
 }
 
-#about,
-#services,
-#contact,
-#products {
-  min-height: 600px;
-  padding-top: 100px;
+.wrapper {
   width: 80%;
   margin: 0 auto;
+}
+
+.video-reveal {
+  margin-top: 50px;
+  float: left;
+  width: 100%;
+  background-color: black;
+  height: 400px;
+}
+
+.video-reveal iframe {
+  height: 100%;
+}
+
+.video-reveal a {
+  display: block;
+  position: relative;
+}
+
+.video-reveal a img {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 130px;
+  left: 45%;
+  width: 10%;
 }

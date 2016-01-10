@@ -19,62 +19,70 @@ body {
   background-color: rgba(33,33,33,0.9);
   margin:0;
   float: left;
-  position: fixed;
 }
 
 .logo{
   color: #fff;
-  position: relative;
-  top: -5px;
-  left: 2%;
+  float: left;
 }
-
 .navigation {
-  @media (min-width: 850px){
-    position: absolute;
-    top: 17px;
-    right: 2%;
-  }
+  float: right;
+  z-index: 9000;
   ul {
     list-style: none;
-    margin: -7px;
     padding: 0;
-    @media (min-width: 850px){
-      margin: 0px;
-    }
+    float: right;
     li {
-      @media (min-width: 850px){
-        display: inline-block;
-        margin: 0 5px;
-      }
+      padding: 0;
+      float: left;
+      margin: 20px 10px;
       a {
-        display: block;
-        width: 100%;
-        padding: 15px;
-        color: #fff;
+        color: red;
         text-decoration: none;
-        background-color: tomato;
-        text-transform: uppercase;
-        @media (min-width: 850px){
-          display: inline-block;
-          float: left;
+        padding: 15px;
+        background-color: black;
+        color: white;
+        box-shadow: 1px 1px 4px #888;
+      }
+      ul.sub-menu {
+        position: absolute;
+        margin: 10px 0 0 0;
+        padding: 0;
+        width: 200px;
+        padding: 40px 0;
+        display: none;
+        li {
+          padding: 0;
+          margin: 10px 0;
+          float: none;
+          a {
+            padding: 15px;
+            display: block;
+            width: 100%;
+            color: white;
+            background-color: gray;
+            box-shadow: none;
+          }
         }
       }
-      a.selected {
-        background-color: orange;
+    }
+    li:hover {
+      a {
+        box-shadow: 1px 1px 4px red;
+      }
+      ul {
+        display: block;
+
       }
     }
-
   }
 }
-
 .responsive-menu-btn {
+  z-index: 8000;
   position: absolute;
   top: 18px;
   right: 2%;
-  @media (min-width: 850px){
-    display: none;
-  }
+  display: none;
   a {
     display: block;
     float: left;
@@ -91,12 +99,32 @@ body {
 }
 
 
-#about,
-#services,
-#contact,
-#products {
-  min-height: 600px;
-  padding-top: 100px;
+
+
+.wrapper {
   width: 80%;
   margin: 0 auto;
+}
+
+.video-reveal {
+  margin-top: 50px;
+  float: left;
+  width: 100%;
+  background-color: black;
+  height: 400px;
+  iframe {
+    height: 100%;
+  }
+  a {
+    display: block;
+    position: relative;
+    img {
+      display: block;
+      margin: 0 auto;
+      position: absolute;
+      top: 130px;
+      left: 45%;
+      width: 10%;
+    }
+  }
 }
